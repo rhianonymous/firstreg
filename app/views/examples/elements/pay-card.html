@@ -1,0 +1,232 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+
+</style>
+
+
+
+
+</header>
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  
+  {{>includes/govuk_firstregprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+
+
+<!-- this is a container for the page contents -->§
+<main id="content" role="main">
+
+
+  
+  <div>
+    <!-- the back link uses a simple javascript to go to previous page -->
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    <!-- the rest of this label is hidden, only used for screenreaders -->
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
+  </div>
+
+
+
+  <br clear="all">
+
+
+
+
+  <form action="basic-flow" method="get" class="form" data-parsley-validate>
+  <!-- This form action runs a simple script that goes to the 'next' page,
+       the name of which is set below as 'nextlink' in a hidden input field.
+       The Parsely tag tells the helper to perform validation on this form.
+  -->
+
+    <input type="hidden" name="nextlink" value="vehicledetailsprog">
+
+
+    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+      Pay by debit or credit card
+    </h1>
+
+    <p>
+      Only UK Maestro, VISA Sebit, MasterCard Debit, Electron debit cards, VISA and MasterCard credit cards are accepted.</p>
+   
+
+<p> <font size="5px">The amount payable is <strong>£120</strong></font></p>
+
+<div id="form-field">
+
+      
+      <label class="form-label" for="model" style="padding-top:0.50em">
+      
+        Cardholder Name
+      
+      </label>
+
+
+      <div id="validfield-1">
+
+        <input type="text" name="model" id "model" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout"
+         <!--required data-parsley-errors-container="validfield-1" 
+         data-parsley-required-message="The Model is required" -->
+
+      </div>
+
+
+      <label class="form-label" for="payment" style="padding-top:0.50em">
+      
+        Card Number
+      
+      </label>
+
+
+      <div id="validfield-2">
+
+        <input type="text" name="payment" id "payment" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" 
+        <!--required data-parsley-errors-container="validfield-2" 
+        data-parsley-required-message="The body type is required"-->
+
+      </div>
+
+</div>
+
+<br>
+    <div class="form-group">
+        <br clear="all" <fieldset="">
+        <legend>
+          <span class="form-label">
+
+            Card Expiry Date
+
+          </span>
+        </legend>
+        <div class="form-date">
+
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12" data-parsley-id="8389"><ul class="parsley-errors-list" id="parsley-id-8389"></ul>
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="dob-year">Year</label>
+            <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="00" data-parsley-id="99"><ul class="parsley-errors-list" id="parsley-id-99"></ul>
+          </div>
+          
+
+        </div>
+          
+      
+
+      </div>
+
+
+<br clear="all">
+
+<div id="form-field">
+
+<label class="form-label" for="payment" style="padding-top:0.50em">
+      
+        Last 3 digits of the card security code
+      
+      </label>
+
+      <div id="validfield-3">
+
+        <input type="text" name="payment" id "payment" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:80px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" 
+        <!--required data-parsley-errors-container="validfield-3" 
+        data-parsley-required-message="The body type is required"-->
+
+      </div>
+
+    </div><!-- end of form field -->
+
+    <br clear="all">
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+      
+
+
+
+
+   
+
+
+    <!-- one green action button per page -->
+    <div class="form-group" style="padding-top:2.2em">
+
+      <input type="submit" class="button" value="Continue">
+
+    </div>
+
+
+
+
+
+
+  </form><!-- end of the form -->
+
+
+</main><!-- end content container -->
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

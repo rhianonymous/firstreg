@@ -11,13 +11,37 @@
 
     <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
 
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
     <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+
+</style>
+
+
+
+
+</header>
 
 {{/head}}
 
 
 {{$propositionHeader}}
-  {{>includes/govuk_evlprop}}
+  
+  {{>includes/govuk_firstregprop}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -55,40 +79,57 @@
        The Parsely tag tells the helper to perform validation on this form.
   -->
 
-    <input type="hidden" name="nextlink" value="basic-2-buttons">
+    <input type="hidden" name="nextlink" value="vehicledetailsprog">
 
 
     <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
-      Tell us your reference number
+      Vehicle details
     </h1>
 
-
-    <img src="/public/images/lastchance-diagram.png" width="280" height="150" align="middle" style="padding:0.3em 0 1.5em 0">
-
-    <br clear="all">
-
+    <p>
+      It is a legal requirement that the information you provide is correct to the best of your knowledge</p>
+   
 
 
 
-    <div id="form-field">
+<div id="form-field">
 
-      <label class="form-label" for="ref-v11" style="padding-top:0.75em">
       
-        16 digit reference number
+      <label class="form-label" for="model" style="padding-top:0.50em">
+      
+        Model
       
       </label>
 
 
       <div id="validfield-1">
 
-        <input class="num form-control" type="text" maxlength="16" autocomplete="off" size="16" id="ref-v11" 
+        <input type="text" name="model" id "model" value="Caddy Maxi 1.6 TDI" class="form-control" type="text" 
         style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
         data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-1" 
-        data-parsley-minlength="16" 
-        data-parsley-minlength-message="The reference number should contain 16 digits" 
-        data-parsley-required-message="The reference number is required">
+        data-parsley-required-message="The Model is required">
 
       </div>
+
+      <p class="form-hint">Including full vehicle specification e.g Fiesta Zetec S, Astra, Corsa GLS 12V </p>
+
+      <label class="form-label" for="vehicletype" style="padding-top:0.50em">
+      
+        Colour(s)
+      
+      </label>
+
+
+      <div id="validfield-2">
+
+        <input type="text" name="vehicletype" id "vehicletype" value="Ruby Red" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-2" 
+        data-parsley-required-message="The body type is required">
+
+      </div>
+
+      <p class="form-hint">e.g Saloon, Estate, Three or Five door hatchback </p>
 
     </div><!-- end of form field -->
 
@@ -97,32 +138,18 @@
 
 
 
-    <!-- this is the simple script that only allows numbers to be entered into the field -->
-    <script>
-        $(document).ready(function() {
-          $("input.num").keydown(function (e) {
-              // Allow: backspace, delete, tab, escape, enter and .
-              if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-                   // Allow: Ctrl+A
-                  (e.keyCode == 65 && e.ctrlKey === true) ||
-                   // Allow: Ctrl+C
-                  (e.keyCode == 67 && e.ctrlKey === true) ||
-                   // Allow: Ctrl+X
-                  (e.keyCode == 88 && e.ctrlKey === true) ||
-                   // Allow: home, end, left, right
-                  (e.keyCode >= 35 && e.keyCode <= 39)) {
-                       // let it happen, don't do anything
-                       return;
-              }
-              // Ensure that it is a number and stop the keypress
-              if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                  e.preventDefault();
-              }
-          });
-      });     
-    </script>
+    </div>
 
 
+
+    </div>
+
+      
+
+
+
+
+   
 
 
     <!-- one green action button per page -->

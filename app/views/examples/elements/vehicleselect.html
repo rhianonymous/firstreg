@@ -17,7 +17,8 @@
 
 
 {{$propositionHeader}}
-  {{>includes/govuk_evlprop}}
+  
+  {{>includes/govuk_firstregprop}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -32,19 +33,23 @@
 <main id="content" role="main">
 
 
-  
-  <div>
-  <!-- the back link uses a simple javascript to go to previous page -->
-  <a class="back-to-previous" href="javascript:history.back()">
-  Back 
-  <!-- the rest of this label is hidden, only used for screenreaders -->
-  <span class="visuallyhidden"> to the previous question</span>
-  </a>
+   <div>
+    <!-- the back link uses a simple javascript to go to previous page -->
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    <!-- the rest of this label is hidden, only used for screenreaders -->
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
   </div>
 
 
 
   <br clear="all">
+  
+
+
+
+ 
 
   
 
@@ -53,11 +58,11 @@
   <!-- This form action runs a simple script that goes to one or another page,
        the name of which is based on the hidden name below + the values from the input buttons in the form.
   -->
-    <input type="hidden" name="nextlink" value="payment">
+    <input type="hidden" name="nextlink" value="vehicleoption">
 
 
     <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
-      Tell us who you are
+      Select a vehicle
     </h1>
 
     
@@ -65,9 +70,9 @@
     <!-- this is one whole radio button, the input is inside the label tags -->
     <label for="radio-inline-1" class="block-label" style="padding-left:50px;margin-top:0;">
 
-      <input id="radio-inline-1" type="radio" name="branch" value="card">
+      <input id="radio-inline-1" type="radio" name="branch" value="vin1">
       <!-- in the input we set type (radio) variable and value for the link to next page -->
-      I am an Individual
+      VIN - EXAMLP31234567A - Fiesta Zetec
 
     </label>
 
@@ -77,9 +82,18 @@
     <!-- this is a second radio button, the input is inside the label tags -->
     <label for="radio-inline-2" class="block-label" style="padding-left:50px;margin-bottom:0">
 
-      <input id="radio-inline-2" type="radio" name="branch" value="dd">
+      <input id="radio-inline-2" type="radio" name="branch" value="vin2">
       <!-- again set the value, this time for a different page to link to next -->
-      I am a Motor Dealer
+      VIN - EXAMPL31234567B - Fiesta Zetec
+   
+    </label>
+
+    <!-- this is a third radio button, the input is inside the label tags -->
+    <label for="radio-inline-3" class="block-label" style="padding-left:50px;margin-bottom:0">
+
+      <input id="radio-inline-3" type="radio" name="branch" value="vin3">
+      <!-- again set the value, this time for a different page to link to next -->
+      VIN - EXAMPL31234567C - Fiesta Zetec
    
     </label>
 

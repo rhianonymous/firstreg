@@ -1,0 +1,211 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  {{>includes/govuk_evlprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+
+
+<!-- this is a container for the page contents -->
+<main id="content" role="main">
+
+
+  
+  <div>
+    <!-- the back link uses a simple javascript to go to previous page -->
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    <!-- the rest of this label is hidden, only used for screenreaders -->
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
+  </div>
+
+
+
+  <br clear="all">
+
+
+
+
+  <form action="basic-flow" method="get" class="form" data-parsley-validate>
+  <!-- This form action runs a simple script that goes to the 'next' page,
+       the name of which is set below as 'nextlink' in a hidden input field.
+       The Parsely tag tells the helper to perform validation on this form.
+  -->
+
+    <input type="hidden" name="nextlink" value="basic-2-buttons">
+
+
+    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+      Vehicle details
+    </h1>
+
+    <p>
+      We have gathered these details on your vehicle, please check and correct as required</p>
+   
+    <br clear="all">
+
+
+
+<div id="form-field">
+
+      <label class="form-label" for="manufacturer" style="padding-top:0.50em">
+      
+        Manufacturer
+      
+      </label>
+
+
+      <div id="validfield-1">
+
+        <input type="text" name="manufacturer" id "manufacturer" value="BMW" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-1" 
+        data-parsley-required-message="The Manufacturer is required" disabled>
+
+      </div>
+
+      <form id="myForm">
+  <h3>Manufacturer</h3>
+  <input type="button" name="manufacturer" id="manufacturer" placeholder="edit" onclick="enableDisableSection1(this.select, 'BMW');" style="" />
+  <p><input type="text" id="BMW" name="BMW" placeholder="BMW" disabled /></p>
+
+
+      <label class="form-label" for="Make" style="padding-top:0.50em">
+      
+        Make
+      
+      </label>
+
+
+      <div id="validfield-2">
+
+        <input type="text" name="make" id "make" value="Mini" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-2" 
+        data-parsley-required-message="The Make is required">
+
+      </div>
+
+      <p class="form-hint">For example: Ford, Peugeot, Vauxhall etc </p>
+
+      <label class="form-label" for="model" style="padding-top:0.50em">
+      
+        Model
+      
+      </label>
+
+
+      <div id="validfield-3">
+
+        <input type="text" name="model" id "model" value="Cooper D" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-3" 
+        data-parsley-required-message="The Model is required">
+
+      </div>
+
+      <p class="form-hint">Including full vehicle specification e.g Fiesta Zetec S, Astra, Corsa GLS 12V </p>
+
+      <label class="form-label" for="vehicletype" style="padding-top:0.50em">
+      
+        Type of body/vehicle
+      
+      </label>
+
+
+      <div id="validfield-4">
+
+        <input type="text" name="vehicletype" id "vehicletype" value="Three door hatchback" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout" required data-parsley-errors-container="validfield-4" 
+        data-parsley-required-message="The body type is required">
+
+      </div>
+
+      <p class="form-hint">e.g Saloon, Estate, Three or Five door hatchback </p>
+
+    </div><!-- end of form field -->
+
+    <br clear="all">
+
+<details style="">
+        <summary>
+          <span class="summary">Where did we get this information?</span>
+        </summary>
+        <div class="panel-indent js-hidden" id="details-content-0" aria-hidden="true" style="display: none; border-left-width: 16px; border-left-style: solid; border-left-color: rgb(235, 235, 235); padding: 0px 20px; margin: 12px 0px;">
+        
+        <p>Our informtion is provided by</p>
+ 
+        </div>
+      </details>
+
+
+
+
+   
+
+
+    <!-- one green action button per page -->
+    <div class="form-group" style="padding-top:2.2em">
+
+      <input type="submit" class="button" value="Continue">
+
+    </div>
+<form id="myForm">
+  <h3>Section 1</h3>
+  Checkbox 1: <input type="checkbox" name="checkbox1" id="checkboxOne" onclick="enableDisableEmail(this.checked, 'emailAddr', 'emailConfirm');enableDisableSection1(this.checked, 'fullName');" />
+  <p><input type="text" id="emailAddr" name="myEmailAddr" placeholder="Email" disabled /></p>
+  <p><input type="text" id="emailConfirm" name="myEmailConfirm" placeholder="Confirm Email" disabled /></p>
+  <p><input type="text" id="fullName" name="myFullName" placeholder="Full Name" disabled /></p>
+
+  <h3>Section 2</h3>
+  Checkbox 2: <input type="checkbox" name="checkbox2" id="checkboxTwo" onclick="enableDisableEmail(this.checked, 'emailAddr', 'emailConfirm');enableDisableSection2(this.checked, 'color', 'size', 'model');" />
+  <p><input type="text" id="color" name="myColor" placeholder="Color" disabled /></p>
+  <p><input type="text" id="size" name="mySize" placeholder="Size" disabled /></p>
+  <p><input type="text" id="model" name="myModel" placeholder="Model" disabled /></p>
+</form>
+
+
+
+
+
+  </form><!-- end of the form -->
+
+
+</main><!-- end content container -->
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
+

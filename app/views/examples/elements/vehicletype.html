@@ -17,7 +17,8 @@
 
 
 {{$propositionHeader}}
-  {{>includes/govuk_evlprop}}
+   
+  {{>includes/govuk_firstregprop}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -57,7 +58,7 @@
 
 
     <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
-      Tell us who you are
+      Type of vehicle you are registering
     </h1>
 
     
@@ -65,9 +66,9 @@
     <!-- this is one whole radio button, the input is inside the label tags -->
     <label for="radio-inline-1" class="block-label" style="padding-left:50px;margin-top:0;">
 
-      <input id="radio-inline-1" type="radio" name="branch" value="card">
+      <input id="radio-inline-1" type="radio" name="branch" value="Import">
       <!-- in the input we set type (radio) variable and value for the link to next page -->
-      I am an Individual
+      Imported Vehicle
 
     </label>
 
@@ -79,7 +80,7 @@
 
       <input id="radio-inline-2" type="radio" name="branch" value="dd">
       <!-- again set the value, this time for a different page to link to next -->
-      I am a Motor Dealer
+      A Rebuild
    
     </label>
 

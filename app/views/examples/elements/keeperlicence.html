@@ -1,0 +1,196 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+
+</style>
+
+
+
+
+</header>
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  
+  {{>includes/govuk_firstregprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+
+
+<!-- this is a container for the page contents -->
+<main id="content" role="main">
+
+
+  
+  <div>
+    <!-- the back link uses a simple javascript to go to previous page -->
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    <!-- the rest of this label is hidden, only used for screenreaders -->
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
+  </div>
+
+
+
+  <br clear="all">
+
+
+
+
+  <form action="basic-flow" method="get" class="form" data-parsley-validate>
+  <!-- This form action runs a simple script that goes to the 'next' page,
+       the name of which is set below as 'nextlink' in a hidden input field.
+       The Parsely tag tells the helper to perform validation on this form.
+  -->
+
+    <input type="hidden" name="nextlink" value="keeperdetails">
+
+
+    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+      Keeper Details
+    </h1>
+
+  
+   <div id="form-field">
+
+      
+      <label class="form-label" for="model" style="padding-top:0.50em">
+      
+        Driver Number
+      
+      </label>
+
+
+      <div id="validfield-1">
+
+        <input type="text" name="drivernumber" id "drivernumber" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout">
+        <!-- required data-parsley-errors-container="validfield-1" 
+        data-parsley-minlength="16" 
+        data-parsley-maxlength="16"
+        data-parsley-minlength-message="Your driver number contains 16 characters" 
+        data-parsley-required-message="Your Driver Number is required" -->
+
+      </div>
+
+      <p class="form-hint">16 digit driver number</p>
+
+      <div class="form-group">
+        <br clear="all"
+      <fieldset>
+        <legend>
+          <span class="form-label">
+            Date of birth
+          </span>
+          <br clear='all'>
+        </legend>
+        <div class="form-date">
+      
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+            <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0">
+          </div>
+
+        </div>
+
+      </fieldset>
+              
+
+    </div>
+    <p class="form-hint">For example: 31 - 03 - 1980</p>
+
+    </div><!-- end of form field -->
+
+    <br clear="all">
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+      
+
+
+
+
+   
+
+
+    <!-- one green action button per page -->
+    <div class="form-group" style="padding-top:2.2em">
+
+      <input type="submit" class="button" value="Continue">
+
+    </div>
+
+
+
+
+
+
+  </form><!-- end of the form -->
+
+
+</main><!-- end content container -->
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

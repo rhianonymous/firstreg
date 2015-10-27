@@ -1,0 +1,129 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+
+</style>
+
+
+
+
+</header>
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  
+  {{>includes/govuk_firstregprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+<main id="content" role="main" style="padding-bottom:0">
+
+
+  <!-- <h1 class="form-title heading-xlarge">
+    Taxing a vehicle
+  </h1> -->
+
+
+  <div>
+  <a class="back-to-previous" href="javascript:history.back()">Back <span class="visuallyhidden"> to the previous question</span></a>
+  </div>
+
+  <br clear="all">
+
+
+
+
+
+  <form action="basic-flow" method="get" class="form">
+  <input type="hidden" name="nextlink" value="payment">
+  
+
+
+
+
+    <h2 class="heading-medium" style="padding:0;margin:0 0 0.3em 0">Summary</h2>
+<br clear="all">
+
+<table>
+
+<tbody>
+   <tr>
+       <td data-title="taxband" class="" data-key="col1" width="100%"><strong>Tax</strong></td>
+
+       <td data-title="co2" class="" data-key="col2"> £65</td>
+   </tr>
+   <tr>
+       <td data-title="taxband" class="" data-key="col1"><strong>First Registration Fee</strong></td>
+
+       <td data-title="co2" class="" data-key="col2"> £55</td>
+   </tr>
+   <tr>
+       <td data-title="12month" class="" data-key="col1"><strong>Total</strong></td>
+       <td data-title="6month" class="" data-key="col2">£120</td>
+   </tr>
+
+ </tbody>
+</table>
+
+<br clear="all">
+
+
+
+
+  
+    <!-- one green action button per page -->
+    <div class="form-group" style="padding-top:2.2em">
+
+      <input type="submit" class="button" value="Pay now">
+
+    </div>
+
+
+</form><!-- end of the form -->
+
+</main><!-- end content container -->
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
