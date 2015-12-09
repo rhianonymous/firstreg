@@ -20,7 +20,6 @@
 <header class="page-header">
 
 <style type="text/css">
-
 .border-bottom-summary {
   padding-right: -15px;
   border-width: 1px;
@@ -28,7 +27,6 @@
   border-bottom-style: solid;
   margin: 0 0px;
 }
-
 </style>
 
 
@@ -52,16 +50,16 @@
 
 
 
-<!-- this is a container for the page contents -->
+
 <main id="content" role="main">
 
 
   
   <div>
-    <!-- the back link uses a simple javascript to go to previous page -->
+    
     <a class="back-to-previous" href="javascript:history.back()">
     Back 
-    <!-- the rest of this label is hidden, only used for screenreaders -->
+    
     <span class="visuallyhidden"> to the previous question</span>
     </a>
   </div>
@@ -74,12 +72,9 @@
 
 
   <form action="basic-flow" method="get" class="form" data-parsley-validate>
-  <!-- This form action runs a simple script that goes to the 'next' page,
-       the name of which is set below as 'nextlink' in a hidden input field.
-       The Parsely tag tells the helper to perform validation on this form.
-  -->
+  
 
-    <input type="hidden" name="nextlink" value="dealerkeeperplay">
+    <input type="hidden" name="nextlink" value="dealerkeeperaddress">
 
 
     <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
@@ -102,9 +97,7 @@
         <input type="text" name="name" id "name" value="" class="form-control" type="text" 
         style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
         data-parsley-trigger="change focusout">
-        <!-- required data-parsley-errors-container="validfield-1" 
-        data-parsley-required-message="Your Forename is required" -->
-
+        
       </div>
 
         <div id="form-field">
@@ -139,8 +132,7 @@
         <input type="text" name="surname" id "surname" value="" class="form-control" type="text" 
         style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
         data-parsley-trigger="change focusout">
-        <!-- required data-parsley-errors-container="validfield-1" 
-        data-parsley-required-message="Your Surname is required" -->
+        
 
       </div>
       
@@ -179,55 +171,9 @@
      <p class="form-hint">For example: 31 - 03 - 1980</p>
           <p class="form-hint">This is not required by law</p>
 
-    </div><!-- end of form field -->
-
-    <br clear="all">
-
-  
-
-
-
-       <div class="form-group">
-       <label for="homenumber">House Number</label>
-       <input name="Number" />
-   
-       </div>
-
-     <div class="form-group">
-        <label for="housename">House Name</label>
-        <input name="Name" />
-
-     </div>
-
-
-
-
-<div id="form-field">
-
-      
-      <label class="form-label" for="postcode" style="padding-top:0.50em">
-      
-      Postcode
-      
-      </label>
-
-
- 
-<div style="overflow: hidden; padding-right: .5em;">
-   <input type="text" name="postcode" id "postcode" value="" class="form-control"
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout">
-</div>​
-<input type="button"value="Find Address" class="button" style="float: right" />
-          
-
-
-          </div>
-          
-      </fieldset>
-
     </div>
 
+    
 
     </div>
 
@@ -235,7 +181,7 @@
 
       
 
-    <!-- one green action button per page -->
+
     <div class="form-group" style="padding-top:2.2em">
 
       <input type="submit" class="button" value="Continue">
@@ -244,10 +190,10 @@
 
 
 
-  </form><!-- end of the form -->
+  </form>
 
 
-</main><!-- end content container -->
+</main>
 
 
 
@@ -259,3 +205,4 @@
 {{/bodyEnd}}
 
 {{/govuk_template}}
+

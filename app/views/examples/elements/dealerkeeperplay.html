@@ -52,16 +52,14 @@
 
 
 
-<!-- this is a container for the page contents -->
 <main id="content" role="main">
 
 
   
   <div>
-    <!-- the back link uses a simple javascript to go to previous page -->
+    
     <a class="back-to-previous" href="javascript:history.back()">
     Back 
-    <!-- the rest of this label is hidden, only used for screenreaders -->
     <span class="visuallyhidden"> to the previous question</span>
     </a>
   </div>
@@ -74,16 +72,13 @@
 
 
   <form action="basic-flow" method="get" class="form" data-parsley-validate>
-  <!-- This form action runs a simple script that goes to the 'next' page,
-       the name of which is set below as 'nextlink' in a hidden input field.
-       The Parsely tag tells the helper to perform validation on this form.
-  -->
+  
 
-    <input type="hidden" name="nextlink" value="vehicleuse2">
+    <input type="hidden" name="nextlink" value="keeperdetailsmisc">
 
 
     <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
-      Keeper details
+     Confirm keeper details
     </h1>
 
     <p>
@@ -97,141 +92,9 @@
           <li><span>Post Code</span><strong>SA12BC</strong></li>
           </ul>
    
-   <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
-      Additional details
-    </h1>
-
-<label class="form-label" for="licencenumber" style="padding-top:0.50em">
-      
-        Driving licence number
+   
 
       
-      </label>
-    
-    <div id="validfield-3">
-
-        <input type="text" name="drivinglicence" id "dnumber" value="" class="form-control" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout" 
-      
-      </div>
-
-   <p class="form-hint">XX Digit Driving licence number</p>
-
-<div id="form-field">
-
-      
-      <label class="form-label" for="coe" style="padding-top:0.50em">
-      
-        Certificate of Entitlement reference number (if required)
-      
-      </label>
-
-
-      <div id="validfield-1">
-
-        <input type="text" name="coeref" id "coeref" value="" class="form-control" type="text" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout" 
-      
-      </div>
-      <br>
-
-      <details style="">
-
-        <summary>
-          <span class="summary">What is a Cerificate of entitlement?</span>
-        </summary>
-
-        <div class="panel-indent js-hidden" id="details-content-0" aria-hidden="true" style="display: none; border-left-width: 16px; border-left-style: solid; border-left-color: rgb(235, 235, 235); padding: 2px,20px; margin: 12px 2px;">
-
-        
-        <p>There are a number of different certificates of entitlement<br> See the list below:<br></p>
-        <ul>
-          <li>Certificate of entitlement to standard rate PIP</li>
-          <li>Certificate of entitlement to enhanced rate PIP</li>
-          <li>Certificate of entitlement to armed forces independence payment<li>
-          <li>Certificate of entitlement to DLA</li>
-          <li>DLA 404</li>
-          <li>WPA442 - War pensions mobility supplement</li>
-          <li>MHS330 - Certificate of exemption</li>
-        </ul>
-
-
- 
-        </div>
-      </details>
-
-      <label class="form-label" for="emailaddress" style="padding-top:0.50em">
-      
-        Email Address
-
-      
-      </label>
-
-
-      <div id="validfield-2">
-
-        <input type="email" name="emailaddress" id "emailaddress" value="" class="form-control" type="email" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6">        <!--data-parsley-trigger="change focusout" 
-        required data-parsley-errors-container="validfield-2" 
-        data-parsley-required-message="Your Email Address is required"-->
-
-        
-
-      </div>
-      
-
-
-      <p class="form-hint">example: you@mail.com</p>
-
-<label class="form-label" for="mobile" style="padding-top:0.50em">
-      
-        Mobile Number
-
-      
-      </label>
-    
-    <div id="validfield-3">
-
-        <input type="number" name="mobile" id "mobile" value="" class="form-control" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout" 
-        data-parsley-trigger="change focusout" ><!--
-        required data-parsley-errors-container="validfield-3" 
-        data-parsley-minlength="11" 
-        data-parsley-maxlength="11"
-        data-parsley-minlength-message="The number you have entered is not a valid mobile number"
-        data-parsley-required-message="Your Mobile Number is required" -->
-      
-
-        
-
-      </div>
-      
-
-    
-
-    <br clear="all">
-
-</div><!-- end of form field -->
-<p class="form-hint"> We use your email address to send transaction receipts to you<br>We will only contact you via mobile if there are any problems with your application<br>The DVLA does not share this information with anyone</p>
-
-
-    </div>
-
-
-
-    </div>
-
-      
-
-
-
-
-
-
-    <!-- one green action button per page -->
     <div class="form-group" style="padding-top:2.2em">
 
       <input type="submit" class="button" value="Continue">
@@ -243,11 +106,10 @@
 
 
 
-  </form><!-- end of the form -->
+  </form>
 
 
-</main><!-- end content container -->
-
+</main>
 
 
 

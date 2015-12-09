@@ -29,7 +29,6 @@
 
 
 
-<!-- this is a container for the page contents -->
 <main id="content" role="main">
 
 
@@ -44,9 +43,7 @@
 
 
   <form action="basic-branch" method="get" class="form">
-  <!-- This form action runs a simple script that goes to one or another page,
-       the name of which is based on the hidden name below + the values from the input buttons in the form.
-  -->
+  
     <input type="hidden" name="nextlink" value="dealer">
 
 
@@ -55,12 +52,10 @@
     </h1>
 
     
-
-    <!-- this is one whole radio button, the input is inside the label tags -->
     <label for="radio-inline-1" class="block-label" style="padding-left:50px;margin-top:0;">
 
       <input id="radio-inline-1" type="radio" name="branch" value="register">
-      <!-- in the input we set type (radio) variable and value for the link to next page -->
+      
       Register a vehicle to a new keeper
 
     </label>
@@ -68,11 +63,11 @@
 
 
     
-    <!-- this is a second radio button, the input is inside the label tags -->
+  
     <label for="radio-inline-2" class="block-label" style="padding-left:50px;margin-bottom:0">
 
       <input id="radio-inline-2" type="radio" name="branch" value="view">
-      <!-- again set the value, this time for a different page to link to next -->
+      
       View assigned vehicles
    
     </label>
@@ -81,8 +76,6 @@
 
 
 
-
-    <!-- one green action button per page -->
     <div class="form-group" style="padding-top:2.2em">
 
       <input type="submit" class="button" value="Continue">
@@ -93,10 +86,9 @@
 
 
 
-  </form><!-- end of the form -->
+  </form>
 
-
-</main><!-- end content container -->
+</main>
 
 
 

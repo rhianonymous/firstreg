@@ -32,16 +32,16 @@
 
 
 
-<!-- this is a container for the page contents -->
+
 <main id="content" role="main">
 
 
   
   <div>
-    <!-- the back link uses a simple javascript to go to previous page -->
+   
     <a class="back-to-previous" href="javascript:history.back()">
     Back 
-    <!-- the rest of this label is hidden, only used for screenreaders -->
+    
     <span class="visuallyhidden"> to the previous question</span>
     </a>
   </div>
@@ -54,10 +54,7 @@
 
 
   <form action="basic-flow" method="get" class="form" data-parsley-validate>
-  <!-- This form action runs a simple script that goes to the 'next' page,
-       the name of which is set below as 'nextlink' in a hidden input field.
-       The Parsely tag tells the helper to perform validation on this form.
-  -->
+  
 
     <input type="hidden" name="nextlink" value="vehicleselect">
 
@@ -86,7 +83,7 @@
       </div>
      
 
-    </div><!-- end of form field -->
+    </div>
     <div id="form-field">
 
       <label class="form-label" for="vin" style="padding-top:0.50em">
@@ -114,7 +111,7 @@
    
 
 
-    <!-- one green action button per page -->
+    
     <div class="form-group" style="padding-top:2.2em">
 
       <input type="submit" class="button" value="Continue">
@@ -126,10 +123,9 @@
 
 
 
-  </form><!-- end of the form -->
+  </form>
 
-
-</main><!-- end content container -->
+</main>
 
 
 

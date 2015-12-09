@@ -7,7 +7,6 @@
 
     <script type="text/javascript" src="/public/javascripts/application.js"></script>
 
-    <!-- add this javascript to make the radio/checkbox buttons work correctly -->
     <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
 
     <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
@@ -26,77 +25,61 @@
 {{$content}} 
 
 
-
-
-<!-- this is a container for the page contents -->
 <main id="content" role="main">
 
 
-  
-  
-
-
-
-  <br clear="all">
+<br clear="all">
 
   
-
-
-  <form action="basic-branch" method="get" class="form">
+<form action="basic-branch" method="get" class="form">
   
-    <input type="hidden" name="nextlink" value="pay">
+<input type="hidden" name="nextlink" value="pay">
 
 
-    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+<h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
       Payment Options
-    </h1>
+</h1>
 
-    <h3>Choose a payment option from the list below</h3>
+<h3>Choose a payment option from the list below</h3>
 
     
 <br clear="all">
     
-    <label for="radio-inline-1" class="block-label" style="padding-left:50px;margin-bottom:0;">
+   <label for="radio-inline-1" class="block-label" style="padding-left:50px;margin-bottom:0;">
 
-      <input id="radio-inline-1" type="radio" name="branch" value="card">
+   <input id="radio-inline-1" type="radio" name="branch" value="card">
       
-      Card
+     Card
 
-    </label>
+   </label>
 
-    <label for="radio-inline-2" class="block-label" style="padding-left:50px;margin-bottom:0">
+   <label for="radio-inline-2" class="block-label" style="padding-left:50px;margin-bottom:0">
 
-      <input id="radio-inline-2" type="radio" name="branch" value="paypal">
+   <input id="radio-inline-2" type="radio" name="branch" value="paypal">
       PayPal
    
-    </label>
+   </label>
 
-    <label for="radio-inline-3" class="block-label" style="padding-left:50px;margin-bottom:0">
+   <label for="radio-inline-3" class="block-label" style="padding-left:50px;margin-bottom:0">
 
-      <input id="radio-inline-3" type="radio" name="branch" value="mobile">
-      <!-- again set the value, this time for a different page to link to next -->
+     <input id="radio-inline-3" type="radio" name="branch" value="mobile">
+      
       Mobile
    
-    </label>
+   </label>
 
 
+<div class="form-group" style="padding-top:2.2em">
+
+   <input type="submit" class="button" value="Continue">
+
+</div>
 
 
-    <!-- one green action button per page -->
-    <div class="form-group" style="padding-top:2.2em">
-
-      <input type="submit" class="button" value="Continue">
-
-    </div>
+</form>
 
 
-
-
-
-  </form><!-- end of the form -->
-
-
-</main><!-- end content container -->
+</main>
 
 
 

@@ -27,130 +27,191 @@
 
 <main id="content" role="main" style="padding-bottom:0">
 
-
-  <!-- <h1 class="form-title heading-xlarge">
-    Taxing a vehicle
-  </h1> -->
-
-
-  <!--<div>
+<!--<div>
   <a class="back-to-previous" href="javascript:history.back()">Back <span class="visuallyhidden"> to the previous question</span></a>
   </div>
 
   <br clear="all">-->
 
+<form action="evl-3-flow" method="get" class="form">
+<input type="hidden" name="nextlink" value="evl-end-dd">
+<input type="hidden" name="nextbacklink" value="evl-pay-card">
+<input type="hidden" name="regmark" value="{{defaultreg}}">
 
 
-
-
-  <form action="evl-3-flow" method="get" class="form">
-  <input type="hidden" name="nextlink" value="evl-end-dd">
-  <input type="hidden" name="nextbacklink" value="evl-pay-card">
-  <input type="hidden" name="regmark" value="{{defaultreg}}">
-
-
-
-    <!--<h2 class="heading-medium" style="padding:0;margin:1.4em 0 1em 0">Payment complete, vehicle taxed</h2> --> 
-
-    <div class="body-container group">
+<div class="body-container group">
 
     
+<div class="application-confirmation" xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" style="margin-top:2em">
 
-    <div class="application-confirmation" xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" style="margin-top:2em">
-      <h1>✔ Payment successful</h1>
-      <h2>An email receipt has been sent to:
-      <strong>you@domain.com</strong></h2>
-    </div>
+   <h1>✔ Registration successful</h1>
+   <h2>An email receipt has been sent to:
+      <strong>you@domain.com</strong>
+   </h2>
+    
+</div>
 
+</div>
 
+<div class="grid-row">
+      
+<div class="column-two-thirds">
 
+   <table style="font-size:100%">
 
+   <thead>
+     <tr>
+         <th style="font-size:100%">Item</th>
+         <th style="font-size:100%">Price</th>
+     </tr>
 
-    </div>
+   </thead>
 
+   <tbody>
+     <tr>
+       <td style="font-size:100%" valign="top">
 
-    <div class="grid-row">
-      <div class="column-two-thirds">
+         <p>
 
+         <b>First Tax Fee</b>
 
-      <p style="margin-top:1em">
-      <strong>Total amount paid</strong>
-      </p>
+         <br>
 
-        <table style="font-size:100%">
-          <thead>
-            <tr>
-              <th style="font-size:100%">Item</th>
-              <th style="font-size:100%">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-size:100%" valign="top">
-              <p><b>First monthly direct debit</b> for vehicle registration <b>{{defaultreg}}</b><br>
-              Valid from <b>{{today}}</b><br>
-              Last 4 digits of bank account: <b>****3242</b></p>
-              </td>
+         <br>
 
-              <td style="font-size:100%" valign="top"><p>£20.07</p></td>
-            </tr>
+         </b>
 
+         </p>
+              
+      </td>
 
+       <td style="font-size:100%" valign="top">
 
-            <tr>
-              <td style="font-size:100%" valign="top">
-              <p>Additional 11 payments, monthly<br>
-              On the first of each month</p>
-              </td>
+           <p>£65.00</p>
 
-              <td style="font-size:100%" valign="top"><p>£20.13 x 11</p></td>
-            </tr>
-
-
-
+       </td>
             
-            <tr>
-              <td style="font-size:100%">Total</td>
-              <td style="font-size:100%">£241.50</td>
-            </tr>
-          </tbody>
-        </table>
+       </tr>
+
+       <tr>
+
+       <td style="font-size:100%" valign="top">
+
+           <p>First Registration Fee<br></p>
+
+       </td>
+
+       <td style="font-size:100%" valign="top">
+
+          <p>£55.00</p>
+
+       </td>
+
+     </tr>
+
+
+     <tr>
+              
+       <td style="font-size:100%">
+
+           <strong>Total</strong>
+
+        </td>
+              
+       <td style="font-size:100%">
+
+        <strong>£120.00</strong>
+
+       </td>
+
+     </tr>
+
+   </tbody>
+
+   </table>
         
       
-    
-    
+<p style="margin-top:2em">
+    You may want to
+   <a href="#">print this page for your records</a>
+    and we have emailed it to the new keeper if an email was provided.
+</p>
 
-    <p style="margin-top:2em">
-    You may want to <a href="#">print this page for your records</a> and we have emailed it to you.
-    </p>
+</div>
+
+</div>
+
+<details style="">
+
+   <summary>
+
+     <span class="summary">What to do next?</span>
+        
+   </summary>
+
+<div class="panel-indent js-hidden" id="details-content-0" aria-hidden="true" style="display: none; border-left-width: 16px; border-left-style: solid; border-left-color: rgb(235, 235, 235); padding: 2px,20px; margin: 12px 2px;">
+
+<p>A document has been sent to your email address. print it off and present it to a number plate supplier and get your plate made up and displayed.</p>
+        
+
+<div id="form-field">
+
+   <label class="form-label" for="vin" style="padding-top:0.50em">
+      
+        V750/V778 Certificate number
+      
+   </label>
 
 
-      </div>
-    </div>
+<div id="validfield-1">
+
+        <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout"> 
+
+</div>
+     
+
+</div>
+        
+<div id="form-field">
+
+   <label class="form-label" for="vin" style="padding-top:0.50em">
+      
+        VRN number
+      
+   </label>
 
 
+<div id="validfield-1">
+
+   <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout"> 
+
+</div>
+     
+
+</div>
 
  
+</div>
+
+</details>
+
+<br clear="all">
 
 
+<div class="form-group" style="padding:1em 0">
 
+   <input type="submit" class="button" value="Finished">
 
-  <!-- Primary buttons, secondary links -->
-  <div class="form-group" style="padding:1em 0">
-    <input type="submit" class="button" value="Finished">
-
-    <!--<p style="padding:1em 0"><a href="start">Cancel application</a>-->
-
-    
-
-
-
-
-  </div>
+</div>
 
 </form>
 
-</main><!-- / #page-container -->
+</main>
+
 {{/content}}
 
 {{$bodyEnd}}

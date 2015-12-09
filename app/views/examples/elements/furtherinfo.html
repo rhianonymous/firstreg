@@ -1,0 +1,170 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+
+</style>
+
+
+</header>
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  
+  {{>includes/govuk_firstregprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+
+
+
+<main id="content" role="main">
+
+
+  
+  <div>
+    
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
+  </div>
+
+
+
+  <br clear="all">
+
+
+ <form action="basic-flow" method="get" class="form" data-parsley-validate>
+  
+
+ <input type="hidden" name="nextlink" value="vehicleuse2">
+
+
+
+    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+      Further information
+    </h1>
+    
+
+<label class="form-label" for="licencenumber" style="padding-top:0.50em">
+      
+        Driving licence number
+
+</label>
+    
+<div id="validfield-3">
+
+   <input type="text" name="drivinglicence" id "dnumber" value="" class="form-control" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout">
+      
+</div>
+
+
+<p class="form-hint">XX Digit Driving licence number<br> e.g MORGA657054SM9IJ</p>
+
+
+<div id="form-field">
+
+      
+   <label class="form-label" for="coe" style="padding-top:0.50em">
+      
+        Certificate of Entitlement reference number (if required)
+      
+   </label>
+
+
+<div id="validfield-1">
+
+   <input type="text" name="coeref" id "coeref" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout">
+      
+</div>
+
+      <br>
+
+<details style="">
+
+<summary>
+
+    <span class="summary">What is a Cerificate of entitlement?</span>
+        
+</summary>
+
+<div class="panel-indent js-hidden" id="details-content-0" aria-hidden="true" style="display: none; border-left-width: 16px; border-left-style: solid; border-left-color: rgb(235, 235, 235); padding: 2px,20px; margin: 12px 2px;">
+
+        
+     <p>There are a number of different certificates of entitlement<br> See the list below:<br></p>
+      <ul>
+          <li>Certificate of entitlement to standard rate PIP</li>
+          <li>Certificate of entitlement to enhanced rate PIP</li>
+          <li>Certificate of entitlement to armed forces independence payment<li>
+          <li>Certificate of entitlement to DLA</li>
+          <li>DLA 404</li>
+          <li>WPA442 - War pensions mobility supplement</li>
+          <li>MHS330 - Certificate of exemption</li>
+      </ul>
+
+</div>
+
+</details>
+
+      
+<div class="form-group" style="padding-top:2.2em">
+
+   <input type="submit" class="button" value="Continue">
+
+</div>
+
+
+
+</form>
+
+
+</main>
+
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

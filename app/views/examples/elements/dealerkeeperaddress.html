@@ -1,0 +1,179 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+    <script type="text/javascript" src="/dvladesign/app/views/examples/elements/editfield.js"></script>
+
+<script type="text/javascript" src="/app/testjava.js"></script>
+
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<header class="page-header">
+
+<style type="text/css">
+.border-bottom-summary {
+  padding-right: -15px;
+  border-width: 1px;
+  border-color: #c0c0c0;
+  border-bottom-style: solid;
+  margin: 0 0px;
+}
+</style>
+
+
+
+
+</header>
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  {{>includes/govuk_navigation_searchbox}}
+  {{>includes/govuk_firstregprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+
+
+
+
+<main id="content" role="main">
+
+
+  
+  <div>
+    
+    <a class="back-to-previous" href="javascript:history.back()">
+    Back 
+    
+    <span class="visuallyhidden"> to the previous question</span>
+    </a>
+  </div>
+
+
+
+  <br clear="all">
+
+
+
+
+  <form action="basic-flow" method="get" class="form" data-parsley-validate>
+
+    <input type="hidden" name="nextlink" value="dealerkeeperplay">
+
+
+    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+      Address details
+    </h1>
+
+  
+   <div id="form-field">
+
+
+      
+      <label class="form-label" for="model" style="padding-top:0.50em">
+      
+      House number
+      
+      </label>
+
+
+      <div id="validfield-1">
+
+        <input type="text" name="number" id "number" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:100px;border-radius:4px;line-height:1.6; margin:0px 2px 8px 0px" 
+        data-parsley-trigger="change focusout">
+        <!-- required data-parsley-errors-container="validfield-1" 
+        data-parsley-required-message="Your Forename is required" -->
+
+      </div>
+    </div>
+  
+    
+    or
+    
+
+       <div id="form-field">
+
+      
+      <label class="form-label" for="model" style="margin:0px 2px 8px 0px">
+      
+      House name
+      
+      </label>
+
+
+      <div id="validfield-1">
+
+        <input type="text" name="name" id "name" value="" class="form-control" type="text" 
+        style="border:#6F777B solid 2px;font-size:120%;width:200px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout">
+        <!-- required data-parsley-errors-container="validfield-1" 
+        data-parsley-required-message="Your Forename is required" -->
+
+      </div>
+      </div>
+
+
+<div id="form-field">
+
+      <br>
+      <label class="form-label" for="postcode" style="padding-top:0.50em">
+      
+      Postcode
+      
+      </label>
+
+
+ 
+<div style="overflow: hidden; padding-right: .5em;">
+   <input type="text" name="postcode" id "postcode" value="" class="form-control"
+        style="border:#6F777B solid 2px;font-size:120%;width:200px;border-radius:4px;line-height:1.6" 
+        data-parsley-trigger="change focusout">
+</div>​
+<br>
+<input type="submit"value="Find Address" class="button" margin=2px/>
+          
+
+
+          </div>
+          
+      </fieldset>
+
+    </div>
+
+
+    </div>
+
+   </div>
+
+
+
+  </form>
+
+
+</main>
+
+
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
