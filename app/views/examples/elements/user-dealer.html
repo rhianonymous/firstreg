@@ -31,108 +31,87 @@
 
 
 
-
-<!-- this is a container for the page contents -->
 <main id="content" role="main">
 
 
   
-  <div>
-    <!-- the back link uses a simple javascript to go to previous page -->
+<div>
+    
     <a class="back-to-previous" href="javascript:history.back()">
     Back 
-    <!-- the rest of this label is hidden, only used for screenreaders -->
+
     <span class="visuallyhidden"> to the previous question</span>
     </a>
+
   </div>
 
-
-
-  <br clear="all">
-
+<br clear="all">
 
 
 
-  <form action="basic-flow" method="get" class="form" data-parsley-validate>
-  <!-- This form action runs a simple script that goes to the 'next' page,
-       the name of which is set below as 'nextlink' in a hidden input field.
-       The Parsely tag tells the helper to perform validation on this form.
-  -->
+<form action="basic-flow" method="get" class="form" data-parsley-validate>
+  
 
-    <input type="hidden" name="nextlink" value="dealeroption">
+   <input type="hidden" name="nextlink" value="dealeroption">
 
 
-    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+   <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
       Log in
-    </h1>
+   </h1>
 
 
 <div id="form-field">
 
-      <label class="form-label" for="vin" style="padding-top:0.50em">
+   <label class="form-label" for="vin" style="padding-top:0.50em">
       
-        User ID
+    User ID
       
-      </label>
+   </label>
 
 
-      <div id="validfield-1">
+<div id="validfield-1">
 
-        <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout"> <!--required data-parsley-errors-container="validfield-1" 
-        
-        data-parsley-required-message="The user ID is required"-->
+   <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" data-parsley-trigger="change focusout"> 
+   <!--required data-parsley-errors-container="validfield-1" 
+   data-parsley-required-message="The user ID is required"-->
 
-      </div>
-      <p class="form-hint">XX digit user ID</p>
-
-    </div><!-- end of form field -->
-    <div id="form-field">
-
-      <label class="form-label" for="vin" style="padding-top:0.50em">
+</div>
       
-       
-       Password
+<p class="form-hint">XX digit user ID</p>
+
+</div>
+    
+<div id="form-field">
+
+   <label class="form-label" for="vin" style="padding-top:0.50em">
       
-      </label>
+   Password
+      
+   </label>
 
 
-      <div id="validfield-1">
+<div id="validfield-1">
 
-        <input class="form-control" type="password" maxlength="20" autocomplete="off" size="20" id="vin" 
-        style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
-        data-parsley-trigger="change focusout"> <!--required data-parsley-errors-container="validfield-1" 
-        
-        data-parsley-required-message="The password is required"-->
+   <input class="form-control" type="password" maxlength="20" autocomplete="off" size="20" id="vin" style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" data-parsley-trigger="change focusout"> 
+   <!--required data-parsley-errors-container="validfield-1" 
+   data-parsley-required-message="The password is required"-->
 
-      </div>
+</div>
 
-    <br clear="all">
+<br clear="all">
 
 <br>
 
+<div class="form-group" style="padding-top:2.2em">
+
+   <input type="submit" class="button" value="Continue">
+
+</div>
 
 
-   
+</form>
 
-
-    <!-- one green action button per page -->
-    <div class="form-group" style="padding-top:2.2em">
-
-      <input type="submit" class="button" value="Continue">
-
-    </div>
-
-
-
-
-
-
-  </form><!-- end of the form -->
-
-
-</main><!-- end content container -->
+</main>
 
 
 

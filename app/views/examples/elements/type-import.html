@@ -28,95 +28,77 @@
 
 
 
-
-<!-- this is a container for the page contents -->
 <main id="content" role="main">
 
 
-  
-  <div>
-    <!-- the back link uses a simple javascript to go to previous page -->
-    <a class="back-to-previous" href="javascript:history.back()">
+<div>
+    
+   <a class="back-to-previous" href="javascript:history.back()">
     Back 
-    <!-- the rest of this label is hidden, only used for screenreaders -->
-    <span class="visuallyhidden"> to the previous question</span>
-    </a>
-  </div>
+    
+     <span class="visuallyhidden"> to the previous question</span>
+
+   </a>
+
+</div>
+
+<br clear="all">
 
 
+<form action="basic-flow" method="get" class="form" data-parsley-validate>
+  
+ <input type="hidden" name="nextlink" value="vehicledetails">
 
-  <br clear="all">
-
-
-
-
-  <form action="basic-flow" method="get" class="form" data-parsley-validate>
-  <!-- This form action runs a simple script that goes to the 'next' page,
-       the name of which is set below as 'nextlink' in a hidden input field.
-       The Parsely tag tells the helper to perform validation on this form.
-  -->
-
-    <input type="hidden" name="nextlink" value="vehicledetails">
-
-
-    <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
+   <h1 class="form-title heading-large" style="margin:0 0 1em 0;padding:0">
       Vehicle details
-    </h1>
+   </h1>
 
 
-   
-    <br clear="all">
+<br clear="all">
 
 
 <div id="form-field">
 
-      <label class="form-label" for="vin" style="padding-top:0.50em">
+   <label class="form-label" for="vin" style="padding-top:0.50em">
       
         Vehicle Identification Number (VIN)
       
-      </label>
+   </label>
 
 
-      <div id="validfield-1">
+<div id="validfield-1">
 
-        <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" 
+   <input class="form-control" type="text" maxlength="20" autocomplete="off" size="20" id="vin" 
         style="border:#6F777B solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6" 
         data-parsley-trigger="change focusout"> <!--required data-parsley-errors-container="validfield-1" 
         data-parsley-minlength="17" 
         data-parsley-minlength-message="The VIN number should contain a minimum of 17 characters" 
         data-parsley-required-message="The VIN number is required"-->
 
-      </div>
-      <p class="form-hint">Minimum 17 digit reference from the chassis or documentation</p>
+</div>
+      
+<p class="form-hint">Minimum 17 digit reference from the chassis or documentation</p>
 
-    </div><!-- end of form field -->
+</div>
 
-    <br clear="all">
+<br clear="all">
 
-    <p style="padding:1em 0"><a href="https://www.gov.uk/vehicle-registration/vehicle-identification-number">Where to find the VIN</a>
-
-
-
-
-   
+<p style="padding:1em 0">
+   <a href="https://www.gov.uk/vehicle-registration/vehicle-identification-number">Where to find the VIN</a>
+</p>
 
 
-    <!-- one green action button per page -->
-    <div class="form-group" style="padding-top:2.2em">
+<div class="form-group" style="padding-top:2.2em">
 
-      <input type="submit" class="button" value="Continue">
+   <input type="submit" class="button" value="Continue">
 
-    </div>
-
+</div>
 
 
+</form>
 
 
-
-  </form><!-- end of the form -->
-
-
-</main><!-- end content container -->
+</main>
 
 
 
